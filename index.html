@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instrument Display</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div id="screen"></div>
+        
+        <script src="js/lib/jquery-2.1.0.min.js"></script>
+        <script src="js/lib/underscore.js"></script>
+        <script src="js/lib/backbone.js"></script>
+
+        <script src="js/displays/heading.js"></script>
+        <script src="js/displays/speed.js"></script>
+
+        <script>
+            function superSimpleSimulation(model) {
+                var hdg = 123.4;
+                var speed = 5.6;
+                setInterval(function() { 
+                        hdg+= parseInt((Math.random()/2.0-.25)*10)/10.0; 
+                        model.set('hdg', hdg); }, 100);
+
+                setInterval(function() { 
+                        speed+= parseInt((Math.random()/2.0-.25)*10)/10.0; 
+                        model.set('speed', speed); }, 500);
+
+            }
+
+            $(function() {
+                var state = Backbone.Model.extend({});
+                var data = new state({'hdg': 123.0, 'speed':5.6});
+
+                var hdgView = new headingView({model: data});
+                $('#screen').append(hdgView.el);
+                hdgView.render();
+
+                var spdView = new speedView({model: data});
+                $('#screen').append(spdView.el);
+                spdView.render();
+
+                superSimpleSimulation(data);
+            });
+        </script>
+    </body>
+</html>
