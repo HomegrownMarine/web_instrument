@@ -1,0 +1,12 @@
+{
+    "name": "web_instrument",
+    "description": "this is my new app",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": ">= 3.4.8",
+        "express3-handlebars": ">= 0.5.0",
+        "less-middleware": "0.1.15",
+	    "debug": "~0.7.4"
+    }
+}

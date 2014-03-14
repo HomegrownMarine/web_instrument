@@ -3,7 +3,7 @@ var speed_template = '<div class="label">SPD</div>\
             <div class="units">kts</div>\
             <canvas class="eq" width="40px" height="100px"></div>';
 
-var speedView = Backbone.View.extend({
+var speedDisplay = Backbone.View.extend({
     tagName: "div",
     className: "section cf spd",
     template: speed_template,

@@ -1,0 +1,65 @@
+body {
+  font-family: Menlo, monospace;
+  background-color: #333;
+}
+/**
+ * from http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+.section {
+  width: 500px;
+  background-color: white;
+}
+.section .label {
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 45px;
+  font-size: 40px;
+  float: left;
+  width: 40px;
+}
+.section .value {
+  float: left;
+  height: 160px;
+  width: 400px;
+  padding: 0 10px;
+  vertical-align: top;
+  text-align: right;
+  font-size: 120px;
+  line-height: 160px;
+}
+.section .units {
+  font-size: 40px;
+  float: right;
+  width: 40px;
+}
+.hdg .ticker {
+  height: 20px;
+  width: 500px;
+}
+.spd .units {
+  font-size: 20px;
+  height: 20px;
+}
+.spd .eq {
+  float: right;
+  width: 40px;
+  height: 130px;
+}

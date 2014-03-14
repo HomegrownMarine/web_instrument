@@ -4,7 +4,7 @@ var heading_template = '<canvas class="ticker" width="1000px" height="20px"></ca
             <!-- small decimal -->\
             <div class="units">°</div>';
 
-var headingView = Backbone.View.extend({
+var headingDisplay = Backbone.View.extend({
     tagName: "div",
     className: "section cf hdg",
     template: heading_template,
