@@ -28,6 +28,7 @@
 
             function startListening(model) {
                 window.model = model;
+                //TODO: backoff if results stop comming back
                 timer = setInterval(function() {
                     $.ajax({
                         dataType: "json",

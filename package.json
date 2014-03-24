@@ -3,6 +3,7 @@
     "description": "this is my new app",
     "version": "0.0.1",
     "private": true,
+    "main": "./app.js",
     "dependencies": {
         "express": ">= 3.4.8",
         "express3-handlebars": ">= 0.5.0",

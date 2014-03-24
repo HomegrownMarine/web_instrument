@@ -11,5 +11,5 @@ var console = require('console');
 exports.load = function(server) {
     server.use('/instrument', express.static(path.join(__dirname, 'www')));
 
-    // server.use('/goto', require('less-middleware')(path.join(__dirname, 'www')));
+    return ['/instrument', "Instrument"];
 };
