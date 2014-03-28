@@ -6,3 +6,5 @@ Runs as a module in https://github.com/HomegrownMarine/app_server.  HTML based i
 
 Heading: with graphic display to help visualize small changes in heading.
 Speed: with graphic acceleration bar.
+
+//TODO: add image
